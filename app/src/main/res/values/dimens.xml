@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="activity_calc_margin_top">40dp</dimen>
-    <dimen name="activity_calc_margin_start">40dp</dimen>
-    <dimen name="activity_calc_margin_end">40dp</dimen>
+    <!-- Calc Result Text Field -->
+    <dimen name="activity_calc_result_height">200dp</dimen>
+    <dimen name="activity_calc_result_margin_top">40dp</dimen>
+    <dimen name="activity_calc_result_margin_start">40dp</dimen>
+    <dimen name="activity_calc_result_margin_end">40dp</dimen>
+
+    <!-- Number Button Size -->
+    <dimen name="button_of_number_width">60dp</dimen>
+    <dimen name="button_of_number_height">60dp</dimen>
+    <dimen name="button_number_margin_top">40dp</dimen>
+    <dimen name="button_number_margin_start">40dp</dimen>
 
     <!-- Text -->
     <dimen name="text_10sp">10sp</dimen>

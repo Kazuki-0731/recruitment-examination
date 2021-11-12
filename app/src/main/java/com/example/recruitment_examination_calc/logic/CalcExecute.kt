@@ -1,4 +1,4 @@
-package com.example.recruitment_examination_calc.util
+package com.example.recruitment_examination_calc.logic
 
 object CalcExecute {
     /**

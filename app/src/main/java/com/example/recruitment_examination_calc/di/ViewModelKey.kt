@@ -1,4 +1,4 @@
-package com.example.recruitment_examination.di
+package com.example.recruitment_examination_calc.di
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

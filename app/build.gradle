@@ -1,4 +1,4 @@
-import com.example.recruitment_examination.build.Dep
+import com.example.recruitment_examination_calc.build.Dep
 
 plugins {
     id 'com.android.application'
@@ -11,7 +11,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.recruitment_examination"
+        applicationId "com.example.recruitment_examination_calc"
         minSdk 22
         targetSdk 31
         versionCode 1

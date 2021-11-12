@@ -1,8 +1,8 @@
-package com.example.recruitment_examination.di
+package com.example.recruitment_examination_calc.di
 
 import android.app.Application
-import com.example.recruitment_examination.MainApplication
-import com.example.recruitment_examination.di.module.CalcActivityModule
+import com.example.recruitment_examination_calc.MainApplication
+import com.example.recruitment_examination_calc.di.module.CalcActivityModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule

@@ -1,4 +1,4 @@
-package com.example.recruitment_examination.build
+package com.example.recruitment_examination_calc.build
 
 object Dep {
     object Dagger {

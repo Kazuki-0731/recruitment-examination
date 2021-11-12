@@ -1,13 +1,13 @@
-package com.example.recruitment_examination.view
+package com.example.recruitment_examination_calc.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.recruitment_examination.R
-import com.example.recruitment_examination.databinding.ActivityCalcBinding
-import com.example.recruitment_examination.viewmodel.CalcViewModel
+import com.example.recruitment_examination_calc.R
+import com.example.recruitment_examination_calc.databinding.ActivityCalcBinding
+import com.example.recruitment_examination_calc.viewmodel.CalcViewModel
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector

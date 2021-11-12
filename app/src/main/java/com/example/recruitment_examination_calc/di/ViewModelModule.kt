@@ -1,9 +1,9 @@
-package com.example.recruitment_examination.di
+package com.example.recruitment_examination_calc.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.recruitment_examination.viewmodel.CalcViewModel
-import com.example.recruitment_examination.viewmodel.ViewModelFactory
+import com.example.recruitment_examination_calc.viewmodel.CalcViewModel
+import com.example.recruitment_examination_calc.viewmodel.ViewModelFactory
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

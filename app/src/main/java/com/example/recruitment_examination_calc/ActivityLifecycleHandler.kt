@@ -1,4 +1,4 @@
-package com.example.recruitment_examination
+package com.example.recruitment_examination_calc
 
 import android.app.Activity
 import android.app.Application

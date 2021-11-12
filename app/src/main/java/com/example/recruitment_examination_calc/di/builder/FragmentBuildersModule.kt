@@ -1,6 +1,6 @@
-package com.example.recruitment_examination.di.builder
+package com.example.recruitment_examination_calc.di.builder
 
-import com.example.recruitment_examination.view.CalcFragment
+import com.example.recruitment_examination_calc.view.CalcFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

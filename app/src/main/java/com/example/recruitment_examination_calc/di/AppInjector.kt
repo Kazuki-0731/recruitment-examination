@@ -1,7 +1,7 @@
-package com.example.recruitment_examination.di
+package com.example.recruitment_examination_calc.di
 
-import com.example.recruitment_examination.ActivityLifecycleHandler
-import com.example.recruitment_examination.MainApplication
+import com.example.recruitment_examination_calc.ActivityLifecycleHandler
+import com.example.recruitment_examination_calc.MainApplication
 
 /**
  * Dagger保持

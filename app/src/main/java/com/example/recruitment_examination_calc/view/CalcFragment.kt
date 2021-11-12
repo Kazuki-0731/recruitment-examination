@@ -1,4 +1,4 @@
-package com.example.recruitment_examination.view
+package com.example.recruitment_examination_calc.view
 
 import android.content.Context
 import android.os.Bundle
@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.recruitment_examination.R
-import com.example.recruitment_examination.databinding.FragmentCalcBinding
-import com.example.recruitment_examination.di.Injectable
-import com.example.recruitment_examination.viewmodel.CalcViewModel
+import com.example.recruitment_examination_calc.R
+import com.example.recruitment_examination_calc.databinding.FragmentCalcBinding
+import com.example.recruitment_examination_calc.di.Injectable
+import com.example.recruitment_examination_calc.viewmodel.CalcViewModel
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 

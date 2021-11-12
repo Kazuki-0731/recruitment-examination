@@ -1,7 +1,7 @@
-package com.example.recruitment_examination.di.module
+package com.example.recruitment_examination_calc.di.module
 
-import com.example.recruitment_examination.di.builder.FragmentBuildersModule
-import com.example.recruitment_examination.view.CalcActivity
+import com.example.recruitment_examination_calc.di.builder.FragmentBuildersModule
+import com.example.recruitment_examination_calc.view.CalcActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

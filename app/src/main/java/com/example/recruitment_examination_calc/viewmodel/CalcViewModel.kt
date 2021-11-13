@@ -6,6 +6,8 @@ import javax.inject.Inject
 
 class CalcViewModel @Inject constructor(): ViewModel() {
     // 計算結果
+    val inputNumber: MutableLiveData<String> = MutableLiveData("")
+    val inputOperator: MutableLiveData<String> = MutableLiveData("")
     val calcResult: MutableLiveData<String> = MutableLiveData("")
 
     // onClick処理

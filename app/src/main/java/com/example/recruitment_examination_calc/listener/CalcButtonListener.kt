@@ -1,6 +1,6 @@
 package com.example.recruitment_examination_calc.listener
 
-interface ButtonCallBack {
+interface CalcButtonListener {
     // onClick Number
     fun onClickNumber0()
     fun onClickNumber1()

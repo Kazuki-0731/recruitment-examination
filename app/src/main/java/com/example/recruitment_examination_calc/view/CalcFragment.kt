@@ -38,9 +38,8 @@ class CalcFragment : Fragment(), Injectable {
             requireActivity(),
             viewModelFactory
         ).get(CalcViewModel::class.java)
-//        binding.viewModel = viewModel
-
-        viewModel.test()
+        binding.lifecycleOwner = viewLifecycleOwner
+        binding.viewModel = viewModel
 
         return binding.root
     }

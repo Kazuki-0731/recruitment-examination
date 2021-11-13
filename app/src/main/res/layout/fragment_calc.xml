@@ -102,6 +102,16 @@
             app:layout_constraintStart_toStartOf="@+id/button_number_4"
             />
 
+        <Button
+            android:id="@+id/button_number_2"
+            android:layout_width="@dimen/button_of_number_width"
+            android:layout_height="@dimen/button_of_number_height"
+            android:text="@string/button_number_2"
+            android:textSize="@dimen/text_18sp"
+            android:layout_marginStart="@dimen/button_number_margin_start"
+            app:layout_constraintTop_toTopOf="@+id/button_number_1"
+            app:layout_constraintStart_toEndOf="@+id/button_number_1"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

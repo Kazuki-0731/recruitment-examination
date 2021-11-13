@@ -83,13 +83,13 @@ class CalcViewModel @Inject constructor(): ViewModel() {
         val inA = inputNumberA.toInt()
         val inB = inputNumberB.toInt()
 
-        if (inA == 0 && inB == 0) {
+        if (inB == 0 && inputOperator.value == "/") {
             // 0除算アラート
             showZeroDivisionAlert(view.context)
         } else {
             inputOperator.value?.let {
                 val result = callTwoItemsCalc(inA, inB, it)
-                calcResult.value += "\n" + result.toString() + "\n"
+                calcResult.value += "\n=$result\n"
                 inputNumberA = ""
                 inputNumberB = ""
                 isNotPushedOperator = true

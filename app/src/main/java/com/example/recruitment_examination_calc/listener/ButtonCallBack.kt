@@ -1,4 +1,4 @@
-package com.example.recruitment_examination_calc.common
+package com.example.recruitment_examination_calc.listener
 
 interface ButtonCallBack {
     // onClick Number

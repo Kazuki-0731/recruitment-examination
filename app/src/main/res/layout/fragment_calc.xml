@@ -5,7 +5,7 @@
 
     <data>
         <variable name="viewModel" type="com.example.recruitment_examination_calc.viewmodel.CalcViewModel"/>
-        <variable name="buttonCallBack" type="com.example.recruitment_examination_calc.common.ButtonCallBack"/>
+        <variable name="buttonCallBack" type="com.example.recruitment_examination_calc.listener.ButtonCallBack"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

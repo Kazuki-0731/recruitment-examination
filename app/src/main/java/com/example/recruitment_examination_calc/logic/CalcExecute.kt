@@ -2,6 +2,25 @@ package com.example.recruitment_examination_calc.logic
 
 object CalcExecute {
     /**
+     * 二項計算
+     * @param inputA
+     * @param inputB
+     * @param operator
+     * @return result
+     */
+    @JvmStatic
+    fun twoItemsCalc(inputA: Int, inputB: Int, operator: String): Int {
+        var result = 0
+        when (operator) {
+            "+" -> result = inputA + inputB
+            "-" -> result = inputA - inputB
+            "*" -> result = inputA * inputB
+            "/" -> result = inputA / inputB
+        }
+        return result
+    }
+
+    /**
      * 四則演算実行
      *
      * 例：1 + 2 * 3 - 4

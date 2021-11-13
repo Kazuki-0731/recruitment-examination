@@ -3,6 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable name="viewModel" type="com.example.recruitment_examination_calc.viewmodel.CalcViewModel"/>
+        <variable name="buttonCallBack" type="com.example.recruitment_examination_calc.common.ButtonCallBack"/>
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,6 +37,7 @@
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_number_7"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickNumber7()}"
             android:layout_marginTop="@dimen/button_number_margin_top"
             app:layout_constraintTop_toBottomOf="@+id/text_calc_result"
             app:layout_constraintLeft_toLeftOf="@+id/text_calc_result"
@@ -43,6 +49,7 @@
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_number_8"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickNumber8()}"
             app:layout_constraintTop_toTopOf="@+id/button_number_7"
             app:layout_constraintStart_toEndOf="@+id/button_number_7"
             app:layout_constraintEnd_toStartOf="@+id/button_number_9"
@@ -54,6 +61,7 @@
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_number_9"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickNumber9()}"
             app:layout_constraintTop_toTopOf="@+id/button_number_8"
             app:layout_constraintEnd_toEndOf="@+id/text_calc_result"
             />
@@ -64,6 +72,7 @@
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_number_4"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickNumber4()}"
             android:layout_marginTop="@dimen/button_number_margin_top"
             app:layout_constraintTop_toBottomOf="@+id/button_number_7"
             app:layout_constraintStart_toStartOf="@+id/button_number_7"
@@ -75,6 +84,7 @@
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_number_5"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickNumber5()}"
             app:layout_constraintTop_toTopOf="@+id/button_number_4"
             app:layout_constraintStart_toEndOf="@+id/button_number_4"
             app:layout_constraintEnd_toStartOf="@+id/button_number_6"
@@ -86,6 +96,7 @@
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_number_6"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickNumber6()}"
             app:layout_constraintTop_toTopOf="@+id/button_number_5"
             app:layout_constraintEnd_toEndOf="@+id/text_calc_result"
             />
@@ -96,6 +107,7 @@
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_number_1"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickNumber1()}"
             android:layout_marginTop="@dimen/button_number_margin_top"
             app:layout_constraintTop_toBottomOf="@+id/button_number_4"
             app:layout_constraintStart_toStartOf="@+id/button_number_4"
@@ -107,6 +119,7 @@
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_number_2"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickNumber2()}"
             app:layout_constraintTop_toTopOf="@+id/button_number_1"
             app:layout_constraintStart_toEndOf="@+id/button_number_1"
             app:layout_constraintEnd_toStartOf="@+id/button_number_3"
@@ -118,28 +131,31 @@
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_number_3"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickNumber3()}"
             app:layout_constraintTop_toTopOf="@+id/button_number_2"
             app:layout_constraintEnd_toEndOf="@+id/text_calc_result"
             />
 
-        <!-- 記号 -->
         <Button
             android:id="@+id/button_number_0"
             android:layout_width="@dimen/button_of_number_width"
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_number_0"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickNumber0()}"
             android:layout_marginTop="@dimen/button_number_margin_top"
             app:layout_constraintTop_toBottomOf="@+id/button_number_1"
             app:layout_constraintStart_toStartOf="@+id/button_number_1"
             />
 
+        <!-- 記号 -->
         <Button
             android:id="@+id/button_plus"
             android:layout_width="@dimen/button_of_number_width"
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_plus"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickPlus()}"
             app:layout_constraintTop_toTopOf="@+id/button_number_0"
             app:layout_constraintStart_toEndOf="@+id/button_number_0"
             app:layout_constraintEnd_toStartOf="@+id/button_minus"
@@ -151,6 +167,7 @@
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_minus"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickMinus()}"
             app:layout_constraintTop_toTopOf="@+id/button_plus"
             app:layout_constraintEnd_toEndOf="@+id/text_calc_result"
             />
@@ -161,6 +178,7 @@
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_asterisk"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickAsterisk()}"
             android:layout_marginTop="@dimen/button_number_margin_top"
             android:layout_marginBottom="@dimen/button_number_margin_bottom"
             app:layout_constraintTop_toBottomOf="@+id/button_number_0"
@@ -174,6 +192,7 @@
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_solidus"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickSolidus()}"
             app:layout_constraintTop_toTopOf="@+id/button_asterisk"
             app:layout_constraintStart_toEndOf="@+id/button_asterisk"
             app:layout_constraintEnd_toStartOf="@+id/button_equal"
@@ -185,6 +204,7 @@
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_equal"
             android:textSize="@dimen/text_18sp"
+            android:onClick="@{() -> buttonCallBack.onClickEqual()}"
             app:layout_constraintTop_toTopOf="@+id/button_solidus"
             app:layout_constraintEnd_toEndOf="@+id/text_calc_result"
             />

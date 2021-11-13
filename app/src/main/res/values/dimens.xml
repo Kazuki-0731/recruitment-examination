@@ -6,7 +6,7 @@
     <dimen name="activity_calc_result_margin_start">40dp</dimen>
     <dimen name="activity_calc_result_margin_end">40dp</dimen>
 
-    <!-- Number Button Size -->
+    <!-- Number Button -->
     <dimen name="button_of_number_width">60dp</dimen>
     <dimen name="button_of_number_height">60dp</dimen>
     <dimen name="button_number_margin_top">40dp</dimen>

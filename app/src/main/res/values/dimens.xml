@@ -9,7 +9,7 @@
     <!-- Number Button -->
     <dimen name="button_of_number_width">60dp</dimen>
     <dimen name="button_of_number_height">60dp</dimen>
-    <dimen name="button_number_margin_top">40dp</dimen>
+    <dimen name="button_number_margin_top">20dp</dimen>
     <dimen name="button_number_margin_start">40dp</dimen>
 
     <!-- Text -->

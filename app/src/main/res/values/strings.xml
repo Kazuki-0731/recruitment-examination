@@ -13,4 +13,10 @@
     <string name="button_number_8">8</string>
     <string name="button_number_9">9</string>
 
+    <string name="button_plus">+</string>
+    <string name="button_minus">-</string>
+    <string name="button_asterisk">*</string>
+    <string name="button_solidus">/</string>
+
+
 </resources>

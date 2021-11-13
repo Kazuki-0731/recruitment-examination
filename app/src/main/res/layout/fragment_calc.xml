@@ -24,6 +24,7 @@
             tools:text="calc result"
             />
 
+        <!-- 数字 -->
         <Button
             android:id="@+id/button_number_7"
             android:layout_width="@dimen/button_of_number_width"
@@ -123,6 +124,8 @@
             app:layout_constraintTop_toTopOf="@+id/button_number_2"
             app:layout_constraintStart_toEndOf="@+id/button_number_2"
             />
+
+        <!-- 記号 -->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

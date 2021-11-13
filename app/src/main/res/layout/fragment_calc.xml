@@ -126,6 +126,71 @@
             />
 
         <!-- 記号 -->
+        <Button
+            android:id="@+id/button_number_0"
+            android:layout_width="@dimen/button_of_number_width"
+            android:layout_height="@dimen/button_of_number_height"
+            android:text="@string/button_number_0"
+            android:textSize="@dimen/text_18sp"
+            android:layout_marginTop="@dimen/button_number_margin_top"
+            app:layout_constraintTop_toBottomOf="@+id/button_number_1"
+            app:layout_constraintStart_toStartOf="@+id/button_number_1"
+            />
+
+        <Button
+            android:id="@+id/button_plus"
+            android:layout_width="@dimen/button_of_number_width"
+            android:layout_height="@dimen/button_of_number_height"
+            android:text="@string/button_plus"
+            android:textSize="@dimen/text_18sp"
+            android:layout_marginStart="@dimen/button_number_margin_start"
+            app:layout_constraintTop_toTopOf="@+id/button_number_0"
+            app:layout_constraintStart_toEndOf="@+id/button_number_0"
+            />
+
+        <Button
+            android:id="@+id/button_minus"
+            android:layout_width="@dimen/button_of_number_width"
+            android:layout_height="@dimen/button_of_number_height"
+            android:text="@string/button_minus"
+            android:textSize="@dimen/text_18sp"
+            android:layout_marginStart="@dimen/button_number_margin_start"
+            app:layout_constraintTop_toTopOf="@+id/button_plus"
+            app:layout_constraintStart_toEndOf="@+id/button_plus"
+            />
+
+        <Button
+            android:id="@+id/button_asterisk"
+            android:layout_width="@dimen/button_of_number_width"
+            android:layout_height="@dimen/button_of_number_height"
+            android:text="@string/button_asterisk"
+            android:textSize="@dimen/text_18sp"
+            android:layout_marginTop="@dimen/button_number_margin_top"
+            app:layout_constraintTop_toBottomOf="@+id/button_number_0"
+            app:layout_constraintStart_toStartOf="@+id/button_number_0"
+            />
+
+        <Button
+            android:id="@+id/button_solidus"
+            android:layout_width="@dimen/button_of_number_width"
+            android:layout_height="@dimen/button_of_number_height"
+            android:text="@string/button_solidus"
+            android:textSize="@dimen/text_18sp"
+            android:layout_marginStart="@dimen/button_number_margin_start"
+            app:layout_constraintTop_toTopOf="@+id/button_asterisk"
+            app:layout_constraintStart_toEndOf="@+id/button_asterisk"
+            />
+
+        <Button
+            android:id="@+id/button_equal"
+            android:layout_width="@dimen/button_of_number_width"
+            android:layout_height="@dimen/button_of_number_height"
+            android:text="@string/button_equal"
+            android:textSize="@dimen/text_18sp"
+            android:layout_marginStart="@dimen/button_number_margin_start"
+            app:layout_constraintTop_toTopOf="@+id/button_solidus"
+            app:layout_constraintStart_toEndOf="@+id/button_solidus"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

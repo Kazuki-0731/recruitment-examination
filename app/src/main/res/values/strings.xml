@@ -17,6 +17,7 @@
     <string name="button_minus">-</string>
     <string name="button_asterisk">*</string>
     <string name="button_solidus">/</string>
+    <string name="button_equal">=</string>
 
 
 </resources>

@@ -48,9 +48,4 @@ class CalcFragment : Fragment(), Injectable {
         super.onAttach(context)
         AndroidSupportInjection.inject(this)
     }
-
-    companion object {
-        @JvmStatic
-        fun newInstance() = CalcFragment()
-    }
 }

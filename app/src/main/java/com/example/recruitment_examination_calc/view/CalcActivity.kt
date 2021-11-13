@@ -34,7 +34,7 @@ class CalcActivity : AppCompatActivity(), HasAndroidInjector {
             viewModelFactory
         ).get(CalcViewModel::class.java)
 
-        replaceFragment(CalcFragment.newInstance(), R.id.calc_content_view)
+        replaceFragment(CalcFragment(), R.id.calc_content_view)
     }
 
     private fun replaceFragment(fragment: Fragment, layoutResId: Int) {

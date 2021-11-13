@@ -203,7 +203,7 @@
             android:layout_height="@dimen/button_of_number_height"
             android:text="@string/button_equal"
             android:textSize="@dimen/text_18sp"
-            android:onClick="@{() -> viewModel.onClickEqual()}"
+            android:onClick="@{viewModel.onClickEqual}"
             app:layout_constraintTop_toTopOf="@+id/button_solidus"
             app:layout_constraintEnd_toEndOf="@+id/text_calc_result"
             />

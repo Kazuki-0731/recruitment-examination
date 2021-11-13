@@ -72,14 +72,18 @@ class CalcViewModel @Inject constructor(): ViewModel() {
      * @return result
      */
     fun onClickEqual(view: View) {
-        if (inputNumberB.isBlank()) return
+        if (inputNumberB.isBlank()) {
+            // 2項目無しアラート
+            showEmptyTwoItemAlert(view.context)
+            return
+        }
 
         val inA = inputNumberA.toInt()
         val inB = inputNumberB.toInt()
 
         if (inA == 0 && inB == 0) {
             // 0除算アラート
-            zeroAlert(view.context)
+            showZeroDivisionAlert(view.context)
         } else {
             inputOperator.value?.let {
                 val result = callTwoItemsCalc(inA, inB, it)
@@ -107,10 +111,22 @@ class CalcViewModel @Inject constructor(): ViewModel() {
     }
 
     /**
+     * 2項目の入力なしアラート
+     * @param context
+     */
+    private fun showEmptyTwoItemAlert(context: Context) {
+        AlertDialog.Builder(context)
+            .setTitle("ERROR！")
+            .setMessage("2項目の入力がありません")
+            .setPositiveButton("OK"){ _, _ -> }
+            .show()
+    }
+
+    /**
      * 0除算アラート
      * @param context
      */
-    private fun zeroAlert(context: Context) {
+    private fun showZeroDivisionAlert(context: Context) {
         AlertDialog.Builder(context)
             .setTitle("ERROR！")
             .setMessage("0除算になっています")

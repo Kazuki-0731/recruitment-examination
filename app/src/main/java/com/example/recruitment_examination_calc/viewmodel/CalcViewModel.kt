@@ -6,6 +6,7 @@ import android.view.View
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.recruitment_examination_calc.logic.CalcExecute
+import com.example.recruitment_examination_calc.navigator.CalcNavigator
 import javax.inject.Inject
 
 class CalcViewModel @Inject constructor(): ViewModel() {
@@ -17,6 +18,7 @@ class CalcViewModel @Inject constructor(): ViewModel() {
     private var isNotPushedOperator = true
     // 計算結果
     val calcResult: MutableLiveData<String> = MutableLiveData("")
+    var navigator: CalcNavigator? = null
 
     init {
         calcResult.value = ""
@@ -61,7 +63,7 @@ class CalcViewModel @Inject constructor(): ViewModel() {
     private fun concatOperator(ope: String) {
         if (inputNumberA.isNotBlank() && isNotPushedOperator) {
             inputOperator.value = ope
-            calcResult.value = calcResult.value + inputOperator.value
+            calcResult.value += ope
             isNotPushedOperator = false
         }
     }
@@ -91,6 +93,7 @@ class CalcViewModel @Inject constructor(): ViewModel() {
                 inputNumberA = ""
                 inputNumberB = ""
                 isNotPushedOperator = true
+                navigator?.scrollToEnd()
             }
         }
     }

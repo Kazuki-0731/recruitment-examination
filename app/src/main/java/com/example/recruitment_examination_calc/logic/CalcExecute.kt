@@ -31,6 +31,9 @@ object CalcExecute {
      * 3. 引き算を足し算して、-1倍
      * 4. 最後に足し算をループ
      * 5. 結果出力
+     *
+     * 余力があった時用に作成
+     * - UIとの連携実装はしていない
      */
     @JvmStatic
     fun executionOfFourArithmeticOperators(

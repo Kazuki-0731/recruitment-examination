@@ -12,12 +12,10 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/text_calc_result"
+        <ScrollView
+            android:id="@+id/scroll_calc_result"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="@{viewModel.calcResult}"
-            android:textSize="@dimen/text_18sp"
             android:background="@color/result_color"
             android:layout_marginTop="@dimen/activity_calc_result_margin_top"
             android:layout_marginStart="@dimen/activity_calc_result_margin_start"
@@ -26,8 +24,19 @@
             app:layout_constraintBottom_toTopOf="@id/button_number_7"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            tools:text="calc result"
-            />
+            >
+
+            <TextView
+                android:id="@+id/text_calc_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.calcResult}"
+                android:textSize="@dimen/text_18sp"
+                android:background="@color/result_color"
+                android:paddingBottom="@dimen/activity_calc_result_padding_end"
+                tools:text="calc result"
+                />
+        </ScrollView>
 
         <!-- 数字 -->
         <Button
@@ -38,8 +47,8 @@
             android:textSize="@dimen/text_18sp"
             android:onClick="@{() -> viewModel.onClickNumber7()}"
             android:layout_marginTop="@dimen/button_number_margin_top"
-            app:layout_constraintTop_toBottomOf="@+id/text_calc_result"
-            app:layout_constraintLeft_toLeftOf="@+id/text_calc_result"
+            app:layout_constraintTop_toBottomOf="@+id/scroll_calc_result"
+            app:layout_constraintLeft_toLeftOf="@+id/scroll_calc_result"
             />
 
         <Button
@@ -62,7 +71,7 @@
             android:textSize="@dimen/text_18sp"
             android:onClick="@{() -> viewModel.onClickNumber9()}"
             app:layout_constraintTop_toTopOf="@+id/button_number_8"
-            app:layout_constraintEnd_toEndOf="@+id/text_calc_result"
+            app:layout_constraintEnd_toEndOf="@+id/scroll_calc_result"
             />
 
         <Button
@@ -97,7 +106,7 @@
             android:textSize="@dimen/text_18sp"
             android:onClick="@{() -> viewModel.onClickNumber6()}"
             app:layout_constraintTop_toTopOf="@+id/button_number_5"
-            app:layout_constraintEnd_toEndOf="@+id/text_calc_result"
+            app:layout_constraintEnd_toEndOf="@+id/scroll_calc_result"
             />
 
         <Button
@@ -132,7 +141,7 @@
             android:textSize="@dimen/text_18sp"
             android:onClick="@{() -> viewModel.onClickNumber3()}"
             app:layout_constraintTop_toTopOf="@+id/button_number_2"
-            app:layout_constraintEnd_toEndOf="@+id/text_calc_result"
+            app:layout_constraintEnd_toEndOf="@+id/scroll_calc_result"
             />
 
         <Button
@@ -168,7 +177,7 @@
             android:textSize="@dimen/text_18sp"
             android:onClick="@{() -> viewModel.onClickMinus()}"
             app:layout_constraintTop_toTopOf="@+id/button_plus"
-            app:layout_constraintEnd_toEndOf="@+id/text_calc_result"
+            app:layout_constraintEnd_toEndOf="@+id/scroll_calc_result"
             />
 
         <Button
@@ -205,7 +214,7 @@
             android:textSize="@dimen/text_18sp"
             android:onClick="@{viewModel.onClickEqual}"
             app:layout_constraintTop_toTopOf="@+id/button_solidus"
-            app:layout_constraintEnd_toEndOf="@+id/text_calc_result"
+            app:layout_constraintEnd_toEndOf="@+id/scroll_calc_result"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

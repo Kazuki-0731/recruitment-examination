@@ -80,22 +80,35 @@ class CalcViewModel @Inject constructor(): ViewModel() {
             return
         }
 
-        val inA = inputNumberA.toInt()
-        val inB = inputNumberB.toInt()
+        try {
+            val inA = inputNumberA.toInt()
+            val inB = inputNumberB.toInt()
 
-        if (inB == 0 && inputOperator.value == "/") {
-            // 0除算アラート
-            showZeroDivisionAlert(view.context)
-        } else {
-            inputOperator.value?.let {
-                val result = callTwoItemsCalc(inA, inB, it)
-                calcResult.value += "\n=$result\n"
-                inputNumberA = ""
-                inputNumberB = ""
-                isNotPushedOperator = true
-                navigator?.scrollToEnd()
+            if (inB == 0 && inputOperator.value == "/") {
+                // 0除算アラート
+                showZeroDivisionAlert(view.context)
+            } else {
+                inputOperator.value?.let {
+                    val result = callTwoItemsCalc(inA, inB, it)
+                    clearInput(result.toString())
+                }
             }
+        } catch (e: NumberFormatException) {
+            clearInput("Error!")
+            showOverFlowAlert(view.context)
         }
+    }
+
+    /**
+     * 入力と結果クリア
+     * @param result
+     */
+    private fun clearInput(result: String) {
+        calcResult.value += "\n=$result\n"
+        inputNumberA = ""
+        inputNumberB = ""
+        isNotPushedOperator = true
+        navigator?.scrollToEnd()
     }
 
     /**
@@ -133,6 +146,18 @@ class CalcViewModel @Inject constructor(): ViewModel() {
         AlertDialog.Builder(context)
             .setTitle("ERROR！")
             .setMessage("0除算になっています")
+            .setPositiveButton("OK"){ _, _ -> }
+            .show()
+    }
+
+    /**
+     * オーバーフローアラート
+     * @param context
+     */
+    private fun showOverFlowAlert(context: Context) {
+        AlertDialog.Builder(context)
+            .setTitle("ERROR！")
+            .setMessage("2,147,483,647以内で入力してください")
             .setPositiveButton("OK"){ _, _ -> }
             .show()
     }

@@ -40,7 +40,6 @@ class CalcActivity : AppCompatActivity(), HasAndroidInjector {
     private fun replaceFragment(fragment: Fragment, layoutResId: Int) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(layoutResId, fragment)
-        transaction.addToBackStack(null)
         transaction.commit()
     }
 

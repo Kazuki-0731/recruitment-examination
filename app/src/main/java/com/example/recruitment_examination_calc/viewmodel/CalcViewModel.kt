@@ -88,12 +88,15 @@ class CalcViewModel @Inject constructor(): ViewModel() {
                 // 0除算アラート
                 showZeroDivisionAlert(view.context)
             } else {
+                // 2項計算
                 inputOperator.value?.let {
                     val result = callTwoItemsCalc(inA, inB, it)
                     clearInput(result.toString())
                 }
             }
         } catch (e: NumberFormatException) {
+            // オーバーフロー
+            // String -> Int するtoInt()の仕様上、Int型最大値を超えるとクラッシュする
             clearInput("Error!")
             showOverFlowAlert(view.context)
         }

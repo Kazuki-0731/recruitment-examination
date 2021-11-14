@@ -22,12 +22,12 @@ class CalcActivity : AppCompatActivity(), HasAndroidInjector {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_calc)
 
-        replaceFragment(CalcFragment(), R.id.calc_content_view)
+        setFragment(CalcFragment(), R.id.calc_content_view)
     }
 
-    private fun replaceFragment(fragment: Fragment, layoutResId: Int) {
+    private fun setFragment(fragment: Fragment, layoutResId: Int) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(layoutResId, fragment)
+        transaction.add(layoutResId, fragment)
         transaction.commit()
     }
 

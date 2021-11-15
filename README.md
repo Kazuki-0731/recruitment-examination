@@ -6,7 +6,7 @@
 ### MVVMアーキテクチャ
 
 Google公式のMVVMアーキテクチャを参考にしています
-* https://github.com/android/architecture-components-samples/tree/master
+* https://github.com/android/architecture-components-samples
 
 
 ## 画面構成

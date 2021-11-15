@@ -18,7 +18,11 @@ Google公式のMVVMアーキテクチャを参考にしています
 | Int型最大値エラーダイアログ | <img src="https://user-images.githubusercontent.com/28224709/141818359-4f174334-1188-470b-90f4-54dd2d6f4554.png" width="30%"> |
 
 ## テスト実行結果
-`ExampleUnitTest`に記載したテストコードの実行結果です。
+* `ExampleUnitTest`に記載したテストコードの実行結果です。
 
 <img src="https://user-images.githubusercontent.com/28224709/141819152-1da32a7a-a767-4f9a-8eeb-1bd95e502142.png" width="90%">
+
+* `ExampleInstrumentedTest`に記載したUIテストの実行結果です。
+
+<img src="https://user-images.githubusercontent.com/28224709/141825164-a8d99dc3-bad3-470d-9543-b9255ffc2c1c.png" width="90%">
 

@@ -1,5 +1,8 @@
 package com.example.recruitment_examination_calc
 
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
+import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.Assert.assertEquals
@@ -18,5 +21,13 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.example.recruitment_examination_calc", appContext.packageName)
+    }
+
+    @Test
+    fun callActivity() {
+        // id check
+        onView(withId(R.id.calc_content_view))
+        // onCreate
+        onView(isDisplayed())
     }
 }

@@ -3,7 +3,7 @@
 * 自然数同士の２項による四則計算
 
 ## 設計
-### MVVM
+### MVVMアーキテクチャ
 
 Google公式のMVVMアーキテクチャを参考にしています
 * https://github.com/android/architecture-components-samples/tree/master
